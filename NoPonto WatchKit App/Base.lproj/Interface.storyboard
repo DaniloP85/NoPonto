@@ -1,15 +1,52 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="20006"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller spacing="16" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="NoPonto_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="08K-Gt-ZsY">
+                            <items>
+                                <timer alignment="center" id="dWJ-aW-NXy"/>
+                                <button width="1" alignment="left" title="Iniciar timer" id="zvL-sT-45U"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="Zqa-pK-71w">
+                            <items>
+                                <label alignment="center" text="Total: 0.5 kg" id="Hcp-HN-9uf"/>
+                                <group width="1" alignment="center" spacing="20" id="gUM-qI-Ez3">
+                                    <items>
+                                        <button alignment="center" backgroundImage="minus" id="Kow-nd-ux6"/>
+                                        <button alignment="center" backgroundImage="plus" id="roB-ll-NtM"/>
+                                    </items>
+                                </group>
+                                <label alignment="center" text="Ponto da Carne" id="uGm-sM-yin"/>
+                                <slider width="1" alignment="left" maximum="3" steps="3" id="fm5-ZW-36I"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="jYl-OE-xJy">
+                            <items>
+                                <label alignment="center" text="Total (Kg)" id="Pe6-ss-NOA"/>
+                                <picker height="55" alignment="left" focusStyle="stack" id="zTj-dm-dGV"/>
+                                <label alignment="center" text="Ponto da carne" id="LiV-kX-5FR"/>
+                                <picker height="55" alignment="left" style="sequence" focusStyle="stack" id="Sfq-MI-3E5"/>
+                            </items>
+                        </group>
+                        <switch width="1" alignment="left" title="Imagens" id="JfD-wO-gsl"/>
+                    </items>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="49" y="-15"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="minus" width="40" height="40"/>
+        <image name="plus" width="40" height="40"/>
+    </resources>
 </document>
