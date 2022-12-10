@@ -10,10 +10,11 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-
-    @IBOutlet weak var timer: WKInterfaceTimer!
-    @IBOutlet weak var buttonTimer: WKInterfaceButton!
-    @IBOutlet weak var labelWeight: WKInterfaceLabel!
+ 
+    @IBOutlet weak var timer2: WKInterfaceTimer!
+    @IBOutlet weak var buttonTimer2: WKInterfaceButton!
+    @IBOutlet weak var labelWeight2: WKInterfaceLabel!
+    
     @IBOutlet weak var groupText: WKInterfaceGroup!
     @IBOutlet weak var groupImage: WKInterfaceGroup!
     @IBOutlet weak var labelCook: WKInterfaceLabel!
@@ -64,7 +65,15 @@ class InterfaceController: WKInterfaceController {
     }
     
     private func updateConfiguration() {
+        let kgString = String(format: "%.1f", kg)
+        labelWeight2.setText("Total: \(kgString) Kg")
+        labelCook.setText(meatTemperature.stringValue)
+        sliderCook.setValue(Float(meatTemperature.rawValue))
         
+        let index = Int(kg * 10 - 1)
+        pickerWeight.setSelectedItemIndex(index)
+        labelCook2.setText(meatTemperature.stringValue)
+        pickerCook.setSelectedItemIndex(meatTemperature.rawValue)
     }
     
     @IBAction func toggleTimer() {

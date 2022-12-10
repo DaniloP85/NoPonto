@@ -69,13 +69,16 @@
                         </switch>
                     </items>
                     <connections>
+                        <outlet property="buttonTimer2" destination="zvL-sT-45U" id="VFv-Ej-y4M"/>
                         <outlet property="groupImage" destination="jYl-OE-xJy" id="GL7-5h-sdP"/>
                         <outlet property="groupText" destination="Zqa-pK-71w" id="aBP-Fn-xLK"/>
                         <outlet property="labelCook" destination="uGm-sM-yin" id="rkc-hC-WJv"/>
                         <outlet property="labelCook2" destination="LiV-kX-5FR" id="yaM-bB-mMy"/>
+                        <outlet property="labelWeight2" destination="Hcp-HN-9uf" id="h6y-JN-SeR"/>
                         <outlet property="pickerCook" destination="Sfq-MI-3E5" id="0Vv-l5-4oA"/>
                         <outlet property="pickerWeight" destination="zTj-dm-dGV" id="2U9-fh-OjM"/>
                         <outlet property="sliderCook" destination="fm5-ZW-36I" id="Wlc-2i-CfZ"/>
+                        <outlet property="timer2" destination="dWJ-aW-NXy" id="Yom-OH-jwC"/>
                     </connections>
                 </controller>
             </objects>
