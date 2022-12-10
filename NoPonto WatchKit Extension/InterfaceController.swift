@@ -77,20 +77,50 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func toggleTimer() {
+        if timerIsRunning{
+            timer2.stop()
+            buttonTimer2.setTitle("Iniciar timer")
+        } else {
+            let time = meatTemperature.cookTimeForKg(kg)
+            timer2.setDate(Date(timeIntervalSinceNow: time))
+            timer2.start()
+            buttonTimer2.setTitle("Parar Timer")
+        }
+        
+        timerIsRunning.toggle()
     }
     
     @IBAction func minus() {
+        if kg > 0.1 {
+            kg -= increment
+            updateConfiguration()
+        }
     }
     
     @IBAction func plus() {
+        if kg < maxKg {
+            kg += increment
+            updateConfiguration()
+        }
     }
     
     @IBAction func onSliderChange(_ value: Float) {
+        let intValue = Int(value)
+        if let meatTemperature = MeatTemperature(rawValue: intValue){
+            self.meatTemperature = meatTemperature
+            updateConfiguration()
+        }
     }
     
     @IBAction func onWeightPickerChange(_ value: Int) {
+        kg = Double(value + 1) * increment
+        updateConfiguration()
     }
     @IBAction func onCookPickerChange(_ value: Int) {
+        if let meatTemperature = MeatTemperature(rawValue: value){
+            self.meatTemperature = meatTemperature
+            updateConfiguration()
+        }
     }
     
     @IBAction func onModeChange(_ value: Bool) {
