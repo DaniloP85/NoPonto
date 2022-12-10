@@ -21,6 +21,7 @@
 		AC4F44662944FD0D00B7C162 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F44652944FD0D00B7C162 /* ExtensionDelegate.swift */; };
 		AC4F44682944FD0D00B7C162 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F44672944FD0D00B7C162 /* ComplicationController.swift */; };
 		AC4F446A2944FD0E00B7C162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4F44692944FD0E00B7C162 /* Assets.xcassets */; };
+		AC4F447A294506F200B7C162 /* MeatTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F4479294506F200B7C162 /* MeatTemperature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		AC4F44672944FD0D00B7C162 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		AC4F44692944FD0E00B7C162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC4F446B2944FD0E00B7C162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC4F4479294506F200B7C162 /* MeatTemperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeatTemperature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				AC4F44672944FD0D00B7C162 /* ComplicationController.swift */,
 				AC4F44692944FD0E00B7C162 /* Assets.xcassets */,
 				AC4F446B2944FD0E00B7C162 /* Info.plist */,
+				AC4F4479294506F200B7C162 /* MeatTemperature.swift */,
 			);
 			path = "NoPonto WatchKit Extension";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC4F44662944FD0D00B7C162 /* ExtensionDelegate.swift in Sources */,
+				AC4F447A294506F200B7C162 /* MeatTemperature.swift in Sources */,
 				AC4F44642944FD0D00B7C162 /* InterfaceController.swift in Sources */,
 				AC4F44682944FD0D00B7C162 /* ComplicationController.swift in Sources */,
 			);

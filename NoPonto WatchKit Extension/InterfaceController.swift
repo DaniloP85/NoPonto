@@ -22,20 +22,51 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var pickerWeight: WKInterfacePicker!
     @IBOutlet weak var labelCook2: WKInterfaceLabel!
     
-    
+    private var kg: Double = 0.1
+    private var meatTemperature: MeatTemperature = .rare
+    private let increment = 0.1
+    private var timerIsRunning = false
+    private let maxKg = 2.0
     
     override func awake(withContext context: Any?) {
         groupImage.setHidden(true)
+        setupPicker()
+        updateConfiguration()
     }
     
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
+    private func setupPicker(){
+        // Picker de quantidade
+        // precisa alimentar  o picker com WKPickerItem
+        var weightItems: [WKPickerItem] = []
+        
+        for weight in stride(from: 0.1, through: maxKg, by: increment) {
+            let item = WKPickerItem()
+            item.title = String(format: "%.1f", weight)
+            weightItems.append(item)
+        }
+        
+        pickerWeight.setItems(weightItems)
+        pickerWeight.setSelectedItemIndex(0)
+        
+        // Picker do ponto da carne
+        var cookItems: [WKPickerItem] = []
+        
+        for imageIndex in 1...4 {
+            let item = WKPickerItem()
+            item.contentImage = WKImage(imageName: "temp-\(imageIndex)")
+            cookItems.append(item)
+        }
+        
+        pickerCook.setItems(cookItems)
+        pickerCook.setSelectedItemIndex(0)
+        
+        
     }
     
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
+    private func updateConfiguration() {
+        
     }
-
+    
     @IBAction func toggleTimer() {
     }
     
