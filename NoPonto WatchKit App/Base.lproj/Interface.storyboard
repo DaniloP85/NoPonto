@@ -14,7 +14,11 @@
                         <group width="1" alignment="left" layout="vertical" id="08K-Gt-ZsY">
                             <items>
                                 <timer alignment="center" id="dWJ-aW-NXy"/>
-                                <button width="1" alignment="left" title="Iniciar timer" id="zvL-sT-45U"/>
+                                <button width="1" alignment="left" title="Iniciar timer" id="zvL-sT-45U">
+                                    <connections>
+                                        <action selector="toggleTimer" destination="AgC-eL-Hgc" id="2ht-bI-u2X"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                         <group width="1" alignment="left" layout="vertical" id="Zqa-pK-71w">
@@ -22,24 +26,57 @@
                                 <label alignment="center" text="Total: 0.5 kg" id="Hcp-HN-9uf"/>
                                 <group width="1" alignment="center" spacing="20" id="gUM-qI-Ez3">
                                     <items>
-                                        <button alignment="center" backgroundImage="minus" id="Kow-nd-ux6"/>
-                                        <button alignment="center" backgroundImage="plus" id="roB-ll-NtM"/>
+                                        <button alignment="center" backgroundImage="minus" id="Kow-nd-ux6">
+                                            <connections>
+                                                <action selector="minus" destination="AgC-eL-Hgc" id="E78-7X-8jL"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="center" backgroundImage="plus" id="roB-ll-NtM">
+                                            <connections>
+                                                <action selector="plus" destination="AgC-eL-Hgc" id="8xM-sh-4gD"/>
+                                            </connections>
+                                        </button>
                                     </items>
                                 </group>
                                 <label alignment="center" text="Ponto da Carne" id="uGm-sM-yin"/>
-                                <slider width="1" alignment="left" maximum="3" steps="3" id="fm5-ZW-36I"/>
+                                <slider width="1" alignment="left" maximum="3" steps="3" id="fm5-ZW-36I">
+                                    <connections>
+                                        <action selector="onSliderChange:" destination="AgC-eL-Hgc" id="Hob-CQ-LiB"/>
+                                    </connections>
+                                </slider>
                             </items>
                         </group>
                         <group width="1" alignment="left" layout="vertical" id="jYl-OE-xJy">
                             <items>
                                 <label alignment="center" text="Total (Kg)" id="Pe6-ss-NOA"/>
-                                <picker height="55" alignment="left" focusStyle="stack" id="zTj-dm-dGV"/>
+                                <picker height="55" alignment="left" focusStyle="stack" id="zTj-dm-dGV">
+                                    <connections>
+                                        <action selector="onWeightPickerChange:" destination="AgC-eL-Hgc" id="C3Y-UP-Es0"/>
+                                    </connections>
+                                </picker>
                                 <label alignment="center" text="Ponto da carne" id="LiV-kX-5FR"/>
-                                <picker height="55" alignment="left" style="sequence" focusStyle="stack" id="Sfq-MI-3E5"/>
+                                <picker height="55" alignment="left" style="sequence" focusStyle="stack" id="Sfq-MI-3E5">
+                                    <connections>
+                                        <action selector="onCookPickerChange:" destination="AgC-eL-Hgc" id="0l2-sp-aYz"/>
+                                    </connections>
+                                </picker>
                             </items>
                         </group>
-                        <switch width="1" alignment="left" title="Imagens" id="JfD-wO-gsl"/>
+                        <switch width="1" alignment="left" title="Imagens" id="JfD-wO-gsl">
+                            <connections>
+                                <action selector="onModeChange:" destination="AgC-eL-Hgc" id="5Kl-6X-nKo"/>
+                            </connections>
+                        </switch>
                     </items>
+                    <connections>
+                        <outlet property="groupImage" destination="jYl-OE-xJy" id="GL7-5h-sdP"/>
+                        <outlet property="groupText" destination="Zqa-pK-71w" id="aBP-Fn-xLK"/>
+                        <outlet property="labelCook" destination="uGm-sM-yin" id="rkc-hC-WJv"/>
+                        <outlet property="labelCook2" destination="LiV-kX-5FR" id="yaM-bB-mMy"/>
+                        <outlet property="pickerCook" destination="Sfq-MI-3E5" id="0Vv-l5-4oA"/>
+                        <outlet property="pickerWeight" destination="zTj-dm-dGV" id="2U9-fh-OjM"/>
+                        <outlet property="sliderCook" destination="fm5-ZW-36I" id="Wlc-2i-CfZ"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="49" y="-15"/>
